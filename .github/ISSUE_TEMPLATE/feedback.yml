@@ -1,0 +1,27 @@
+name: Feedback
+description: A bug, an idea, or something wrong with the map or a hike
+labels: [feedback]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback?
+      options:
+        - Something's broken
+        - An idea
+        - The map or a hike is wrong
+        - Something else
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Where?
+      description: The page's address, if it's about a page.
+      placeholder: https://www.hikeratlas.com/hikes/…
+  - type: textarea
+    id: details
+    attributes:
+      label: Tell us about it
+    validations:
+      required: true
