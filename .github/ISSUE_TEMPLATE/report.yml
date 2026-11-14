@@ -1,0 +1,34 @@
+name: Report content
+description: Something on Hiker Atlas that shouldn't be there (spam, abuse, private information...)
+title: "Report: "
+labels: [report]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Reports are **public**: don't put anyone's personal information here.
+  - type: input
+    id: link
+    attributes:
+      label: What are you reporting?
+      description: The "Report" link fills this in. Otherwise, paste the page's address, or the record's at:// URI.
+      placeholder: at://did:plc:…/com.hikeratlas.temp.review/…
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Why?
+      options:
+        - Spam
+        - Harassment or hate
+        - Not about this hike
+        - Private information (someone's home, a face, a licence plate...)
+        - Copyright
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Anything else we should know?
